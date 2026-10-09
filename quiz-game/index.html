@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Quiz Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    </head>
+<body>
+  <div class="Container">
+    <div class="screen active" id="start-screen">
+      <h1>Quiz Time!</h1>
+      <p>Test your knowledge with these fun questions. You get 15 seconds for each one!</p>
+      <h3 class="difficulty-title">Choose a difficulty</h3>
+      <div class="difficulty-options" role="radiogroup" aria-label="Difficulty">
+        <button type="button" class="difficulty-btn" role="radio" aria-checked="false" data-difficulty="easy">
+          Easy<small>Everyday knowledge</small>
+        </button>
+        <button type="button" class="difficulty-btn" role="radio" aria-checked="true" data-difficulty="medium">
+          Medium<small>A bit of a challenge</small>
+        </button>
+        <button type="button" class="difficulty-btn" role="radio" aria-checked="false" data-difficulty="hard">
+          Hard<small>For quiz champions</small>
+        </button>
+      </div>
+      <p class="best" id="best-start"></p>
+      <button id="start-btn">Start Quiz</button>
+    </div>
+
+     <div class="screen" id="quiz-screen">
+      <div class="quiz-header">
+       <h2 id="question-text">Question goes here</h2>
+       <div class="quiz-info">
+        <p>Question <span id="current-question">1</span> of <span id="total-questions">7</span></p>
+
+        <p>Score: <span id="score">0</span></p>
+        <p class="level-tag">Level: <span id="level-label">Medium</span></p>
+        <p class="timer">Time: <span id="timer">15</span>s</p>
+	     </div>
+      </div>
+
+      <div id="answers-container" class="answers-container"></div>
+
+      <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+      </div>
+     </div>
+     <div id="result-screen" class="screen">
+    <h1>Quiz Results</h1>
+
+    <div class="result-info">
+      <p>You scored <span id="final-score">0</span> out of <span id="max-score">7</span> <span class="level-pill" id="result-level">Medium</span></p>
+
+      <div id="result-message">Good job!</div>
+      <p class="best" id="best-result"></p>
+    </div>
+    <button id="restart-btn">Play Again</button>
+    <button id="change-level-btn" class="secondary">Change Difficulty</button>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

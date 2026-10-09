@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>	
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+      <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    </head>
+  <body>
+    <div class="signup-container">
+      <div class="icon-container">
+        <i class="far fa-envelope-open"></i>
+      </div>
+      <h2>Join Our Newsletter</h2>
+      <p>Get the latest updates and coding tips straight to your inbox.</p>
+
+      <form id="signup-form">
+        <div class="input-group">
+          <i class="far fa-envelope"></i>
+          <input type="email" required placeholder="Enter your email" />
+        </div>
+
+        <button id="subscribe-btn">Subscribe <i class="fas fa-arrow-right"></i></button>
+        <p id="form-error" class="form-error"></p>
+      </form>
+
+      <div id="thanks" class="thanks hidden" role="status">
+        <i class="fas fa-circle-check"></i>
+        <h3>You are subscribed!</h3>
+        <p>We sent a welcome note to <strong id="subscriber"></strong>.</p>
+      </div>
+
+      <div class="benefits">
+        <p class="benefit-item"><i class="fas fa-check"></i> Weekly coding tips</p>
+        <p class="benefit-item"><i class="fas fa-check"></i> No spam, unsubscribe anytime</p>
+      </div>
+    </div>
+      <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag  And Drop</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    </head>
+<body>
+  <div class="container">
+    <h1>Simple Kanban Board</h1>
+
+    <form id="add-form" class="add-form">
+      <input type="text" id="new-task" placeholder="Add a new task..." aria-label="New task" maxlength="60" />
+      <button type="submit">Add to To Do</button>
+    </form>
+
+    <div class="board">
+      <div class="list" id="todo">
+        <h2>To Do <span class="count" id="count-todo">0</span></h2>
+      </div>
+      <div class="list" id="progress">
+        <h2>In Progress <span class="count" id="count-progress">0</span></h2>
+      </div>
+      <div class="list" id="done">
+        <h2>Done <span class="count" id="count-done">0</span></h2>
+      </div>
+    </div>
+    <p class="hint">Drag cards between columns. Click the &times; to delete a task. Your board is saved automatically.</p>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f4f0;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fffaf5;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(60, 34, 28, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  color: #553730;
+  margin-bottom: 1.2rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #805348;
+  font-weight: bold;
+}
+
+input {
+  border: 2px solid #f5ece6;
+  border-radius: 6px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #db5d34;
+}
+
+small {
+  visibility: hidden;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  font-size: 12px;
+}
+
+button {
+  cursor: pointer;
+  background: #db5d34;
+  border: none;
+  color: white;
+  display: block;
+  font-size: 1rem;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 6px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #b94d29;
+}
+
+.form-group.error input {
+  border-color: #e43f45;
+}
+
+.form-group.success input {
+  border-color: #45b579;
+}
+
+.form-group.error small {
+  visibility: visible;
+  color: #e43f45;
+}
+
+/* ---- warm theme additions ---- */
+h1, h2, h3 { font-family: "Fraunces", Georgia, serif; letter-spacing: -0.01em; }
+button, input, select, textarea { font-family: "Nunito", sans-serif; }
+::selection { background: #ffd9c7; color: #3d2420; }
+
+/* ---- password toggle ---- */
+.password-wrap { position: relative; }
+.password-wrap input { padding-right: 64px; }
+.toggle-pw { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: auto; margin: 0; padding: 4px 10px; border: none; border-radius: 8px; background: #fde8df; color: #a8412c; font-size: 0.8rem; font-weight: 700; cursor: pointer; }
+.toggle-pw:hover { background: #fbd5c5; }

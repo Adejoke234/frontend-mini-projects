@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}	
+
+:root {
+  --bg-color: #2b1c18;
+  --container-bg: #3a2621;
+  --primary-color: #f6b18c;
+  --secondary-color: #cc3611;
+  --text-primary: #eddcd0;
+  --text-secondary: #b9aca7;
+  --border-color: #4c312b;
+  --input-bg: #4c312b;
+  --shadow-color: rgba(60, 34, 28, 0.3);
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--bg-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-primary);
+}
+
+.signup-container {
+  background-color: var(--container-bg);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  border: 1px solid var(--border-color);
+}
+
+.icon-container {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+h2 {
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+}
+
+input {
+  width: 100%;
+  padding: 0.85rem 0.85rem 0.85rem 2.5rem;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(246, 177, 140, 0.25);
+}
+
+input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+button {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: var(--primary-color);
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #e9976a;
+  transform: translateY(-2px);
+}
+
+button i {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 5px var(--secondary-color);
+}
+
+button:hover i {
+  transform: translateX(3px);
+}
+
+.benefits {
+  margin-top: 1.5rem;
+  text-align: left;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.benefit-item i {
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 500px) {
+  .signup-container {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ---- warm theme additions ---- */
+h1, h2, h3 { font-family: "Fraunces", Georgia, serif; letter-spacing: -0.01em; }
+button, input, select, textarea { font-family: "Nunito", sans-serif; }
+::selection { background: #ffd9c7; color: #3d2420; }
+
+/* ---- newsletter changes ---- */
+.hidden { display: none !important; }
+.form-error { color: #e96368; font-size: 0.9rem; min-height: 1.2em; margin-top: 8px; }
+.thanks { text-align: center; padding: 10px 0 20px; }
+.thanks i { font-size: 3rem; color: #ef9586; margin-bottom: 10px; }
+.thanks h3 { margin-bottom: 6px; }
+.thanks p { margin: 0; }
+button.loading { opacity: 0.7; pointer-events: none; }

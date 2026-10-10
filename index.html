@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nabilat's Frontend Mini Projects</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,"Times New Roman",serif;background:#fbeee6;color:#553730;line-height:1.5;padding:40px 20px}
+.wrap{max-width:1000px;margin:0 auto}
+header{text-align:center;margin-bottom:36px}
+h1{font-size:2.2rem;color:#e5694f;margin-bottom:8px}
+header p{font-size:1.05rem}
+header a{color:#e5694f;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.card{background:#fffaf5;border:1px solid #f1d9cc;border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px;box-shadow:0 4px 12px rgba(229,105,79,.08)}
+.card h2{font-size:1.15rem}
+.card p{font-size:.95rem;flex:1}
+.links{display:flex;gap:10px;margin-top:6px}
+.links a{text-decoration:none;font-size:.9rem;padding:8px 14px;border-radius:999px;font-family:Arial,sans-serif}
+.demo{background:#e5694f;color:#fff}
+.demo:hover{background:#cf5640}
+.code{border:1px solid #e5694f;color:#e5694f}
+.code:hover{background:#fbeee6}
+footer{text-align:center;margin-top:40px;font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>Frontend Mini Projects</h1>
+<p>16 small projects built with HTML, CSS and JavaScript by Nabilat Salawudeen.</p>
+<p><a href="https://adejoke234.github.io/nabilat-portfolio-/">Back to my portfolio</a></p>
+</header>
+<div class="grid" id="grid"></div>
+<footer>Made with care. Click Live Demo to try each project.</footer>
+</div>
+<script>
+var projects=[
+["quiz-game","Quiz Game","Timed quiz with 20 questions, three difficulty levels and saved best scores."],
+["todo-app","To-Do App","Add, complete, delete and double-click to edit your tasks."],
+["pricing-cards","Pricing Cards","Pricing plans with a monthly and yearly switch."],
+["password-generator","Password Generator","Strong random passwords with options and look-alike character removal."],
+["currency-converter","Currency Converter","Live exchange rates with a swap button."],
+["expense-tracker","Expense Tracker","Track income and expenses with a saved balance."],
+["recipe-finder","Recipe Finder","Search meals and save your favorites."],
+["github-finder","GitHub Finder","Look up any GitHub user and see recent searches."],
+["color-palette-generator","Color Palette Generator","Generate palettes, lock colors and press Space for new ones."],
+["bookmark-saver","Bookmark Saver","Save and search your favorite links."],
+["contact-form","Contact Form","Contact form with a character counter and success screen."],
+["form-validator","Form Validator","Sign-up form with live validation and show/hide password."],
+["newsletter-signup","Newsletter Signup","Email signup with validation and a thank-you message."],
+["team-members-showcase","Team Members Showcase","Team cards with a search box."],
+["drag-and-drop","Drag and Drop Board","Kanban board with add, delete and saved state."],
+["404-page","404 Page","Animated not-found page with a way back home."]
+];
+var g=document.getElementById("grid");
+projects.forEach(function(p){
+var c=document.createElement("div");c.className="card";
+c.innerHTML='<h2>'+p[1]+'</h2><p>'+p[2]+'</p><div class="links"><a class="demo" href="'+p[0]+'/">Live Demo</a><a class="code" href="https://github.com/Adejoke234/frontend-mini-projects/tree/main/'+p[0]+'">Code</a></div>';
+g.appendChild(c);
+});
+</script>
+</body>
+</html>
